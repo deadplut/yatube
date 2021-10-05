@@ -1,7 +1,10 @@
 {% extends "base.html" %}
-{% block title %}Последние обновления на сайте{% endblock %}
-{% block header %}Последние обновления на сайте{% endblock %}
+{% block title %}Записи сообщества {{ group }}{% endblock %}
+{% block header %}Записи сообщества {{ group }}{% endblock %}
 {% block content %}
+    <h5>
+        {{ group.description }}
+    </h5>
 
     {% for post in posts %}
     <h3>
@@ -11,4 +14,4 @@
     {% if not forloop.last %}<hr>{% endif %}
     {% endfor %}
 
-{% endblock %}/
+{% endblock %}
